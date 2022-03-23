@@ -1,0 +1,71 @@
+﻿@model MySite4u.ViewModels.IndexViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-hero">
+    <div class="section-center">
+        <h3 class="page-hero-title">Home / Projects</h3>
+    </div>
+</section>
+<!--  ======================= Start Main Area ================================ -->
+<main class="site-main">
+    <!--  ======================= Project Area =============================  -->
+    <section class="project-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="project-title pb-5">
+                        <div id="searchWrapper" class="form-group">
+                            <input type="text" class="form-control"
+                                   name="searchBar"
+                                   id="searchBar"
+                                   placeholder="search for a Project" />
+                        </div>
+                        <hr />
+                    </div>
+                    <!-- filter buttons -->
+                    <div class="btn-container">
+                        <div class="row grid justify-content-center">
+                            <button type="button" class="btn btn-outline-primary filter-btn" data-id="all">
+                                all
+                            </button>
+                            <button type="button" class="btn btn-outline-danger filter-btn" data-id="SPA">
+                                SinglePage-App
+                            </button>
+                            <button type="button" class="btn btn-outline-info filter-btn" data-id="JsWidgets">
+                                JsWidgets
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary filter-btn" data-id="Templates">
+                                Templates
+                            </button>
+                            <button type="button" class="btn btn-outline-success filter-btn" data-id="RealState">
+                                RealState
+                            </button>
+                            <button type="button" class="btn btn-outline-warning filter-btn" data-id="Retail">
+                                Retail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="projects">
+                        <div id="card" class="row grid justify-content-center"></div>
+                        <div id="btn-container"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--  ======================= End Project Area =============================  -->
+</main>
+
+<!--  ======================= End Main Area ================================ -->
+@section Scripts{
+    <script type="module" src="~/js/portfolio.js"></script>
+
+}

@@ -1,0 +1,37 @@
+﻿
+
+<h2 class="text-center">My Videos</h2>
+<hr />
+
+<div class="container">
+     <div class="row" id="youtube-container">
+
+     </div>
+</div>
+
+
+@section scripts{ 
+    <script>
+        let nextPageToken = "";
+        function getVideos() {
+            fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCymPTmdV5goU-IBMCAPaErQ&maxResults=57&order=date&key=AIzaSyAtBJJ-bZknixTcKVGcdthrQwc0XhjSuhg&pageToken=' + nextPageToken)
+                .then((result) => {
+                    return result.json();
+                }).then((data) => {
+                    console.log(data.items);
+                    let videos = data.items
+                    nextPageToken = data.nextPageToken;
+                    let videoContainer = document.querySelector('#youtube-container')
+                    for (video of videos) {
+                        videoContainer.innerHTML += `
+                        <div class="col-md-4 p-3">
+                            <h5 class="text-muted">${video.snippet.title}</h4>
+                            <img src="${video.snippet.thumbnails.default.url}">
+                        </div>
+                      `
+                    }
+                });
+        }
+        getVideos();
+    </script>
+}

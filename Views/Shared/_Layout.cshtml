@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MySite4u</title>
+    <meta name="Keywords" content="UX, UI, Graphic Designer,ICreatesites4u, Logo Designer, Web Designer,Davenport, Polk County,Web-Design, Brand Identity, Website Developer" />
+    <meta name="author" content="Martin Fernandez" />
+    <meta name="description" content="Martin Fernandez is a web-designer that makes awesome things for people." />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/styles/Layout/_Contact.css" rel="stylesheet" />
+    <link href="~/styles/Layout/_Post.css" rel="stylesheet" />
+    <link href="~/styles/Layout/_Portfolio.css" rel="stylesheet" />
+    <link href="~/styles/Layout/_AdminPanel.css" rel="stylesheet" />
+    <link href="~/styles/Layout/_FrontPage.css" rel="stylesheet" />
+    <link href="~/styles/Layout/_Members.css" rel="stylesheet" />
+    <link href="~/styles/Layout/_Home.css" rel="stylesheet" />
+    <link href="~/styles/Layout/_Footer.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/search.css" rel="stylesheet" />
+    <link href="~/fullcalendar/main.css" rel="stylesheet" />
+    <link href="~/css/tab.css" rel="stylesheet" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6625739891435049"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- preloader start -->
+    <div class="preloader">
+        <div class="spin"></div>
+    </div>
+    <partial name="_Header" />
+    <div class="body-content">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <partial name="_Footer" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="~/js/preloader.js"></script>
+    <script src="~/js/scrolltop.js"></script>
+    <script src="~/fullcalendar/main.js"></script>
+    <script src="~/js/carousel.js"></script>
+    <script src="https://kit.fontawesome.com/e19c476714.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

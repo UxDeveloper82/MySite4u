@@ -1,0 +1,63 @@
+﻿@model MySite4u.Models.Portfolio
+
+@{ ViewData["Title"] = "Details"; }
+
+
+<section class="page-hero">
+    <div class="section-center">
+        <h3 class="page-hero-title">Home / Project-Detail</h3>
+    </div>
+</section>
+<div class="container ">
+    <div class="row">
+            <input asp-for="@Model.Id" type="hidden" />
+            <div class="row p-5" id="ports"></div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script>
+        const portfolioId = document.getElementById("Id").value;
+        const portList = document.getElementById("ports");
+
+        const loadPortsDetails = async () => {
+            try {
+                const res = await fetch(`/api/portfolio/${portfolioId}`);
+                const portCharacters = await res.json();
+                displayPorts(portCharacters);
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+        loadPortsDetails();
+
+        const displayPorts = (port) => {
+            const htmlString = `
+                    <div class="col-md-12 border p-3 lift-hover-less mb-4 search-background">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-4 p-5">
+                                 <img style="width:100%" class="img-thumbnail" src="/Content/Blog/${port.portfolioPhoto}" />
+                                    <div class="p-5">
+                                        <a class="btn btn-outline-success" href="/UI/Portfolio/Index">Go Back To List</a>
+                                        <a class="btn btn-outline-warning" href="${port.codeLink}">Github link</a>
+                                        <a class="btn btn-outline-info" href="${port.link}">Goto Page</a>
+                                    </div>
+                            </div>
+                            <div class="col-lg-6 col-md-8 p-5">
+                                <h3 class="title">Name: ${port.name}</h4>
+                                <h4 class="about-title">Type: ${port.type}</h4>
+                                <p class="about">Details: ${port.details} ...</h4>
+                                <p class="about">Language: ${port.language}</h4>
+                            </div>
+                            
+                         </div>
+                      </div>
+                </div>
+                  `;
+            portList.innerHTML = htmlString
+        };
+    </script>
+
+}

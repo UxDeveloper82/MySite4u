@@ -1,0 +1,232 @@
+﻿@model IEnumerable<Member>
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--  ======================== About Me Area ==============================  -->
+<div id="myteam" class="container about-area mt-5">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 mt-xl-5">
+            <div class="heading-title">
+                <h3 class="text-uppercase text-center">MEET THE FOUNDER</h3>
+                <hr />
+                <p class="para text-center">
+                    WE ARE DYNAMIC TEAM AND
+                    BUSINESS AGENCY
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="searchWrapper">
+        <input type="text"
+               name="searchBar"
+               id="searchBar"
+               placeholder="search for a Name" />
+    </div>
+    <div id="members" class="row"></div>
+</div>
+
+
+<section class="head">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 mt-xl-5">
+                <div id="tab-heading" class="heading-title">
+                    <h3 class="text-uppercase text-center">WHY US?</h3>
+                    <hr />
+                    <p class="text-uppercase text-center">
+                        The leader in website design
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row grid justify-content-center">
+            <div id="tabs-container" class="col-lg-12 col-md-12 col-xs-12 operations">
+                <div class="btn-group btn-group-sm operations__tab-container">
+                    <button class="btn btn-secondary operations__tab operations__tab--1 operations__tab--active"
+                            data-tab="1">
+                        <span>01</span>Digital Services
+                    </button>
+                    <button class="btn btn-secondary operations__tab operations__tab--2" data-tab="2">
+                        <span>02</span>Consulting Services
+                    </button>
+                    <button class="btn btn-secondary operations__tab operations__tab--3" data-tab="3">
+                        <span>03</span>Technology Services
+                    </button>
+                </div>
+                <div class="col-lg-12 col-sm-6 col-xs-3 operations__content operations__content--1 operations__content--active">
+                    <h5 class="text-center operations__header">
+                        Data-rich solutions and customer-driven innovation.
+                    </h5>
+                    <p class="lead">
+                        MANY PEOPLE HAVE THEIR FAVORITE BOUTIQUES, SHOPS, RESTAURANTS, ETC. MOST GO TO
+                        THOSE PLACES IN PARTICULAR, NOT ONLY FOR THE GREAT PRODUCT BUT FOR THE CUSTOMER
+                        SERVICE AS WELL. BEING IN POLK COUNTY IS PERFECT FOR THIS MINDSET BECAUSE IT IS
+                        GROWING SO QUICKLY, YET IT STILL GIVES ITS RESIDENTS A SMALL TOWN FEEL. AT
+                        ICREATESITES4U, GIVING OUR CLIENTS THAT FEELING IS REALLY IMPORTANT. WE STRIVE TO
+                        BE HONEST, COMPLETELY TRANSPARENT AND DO OUR BEST TO MAKE OUR CLIENTS FEEL
+                        COMFORTABLE, WHILE STILL GIVING PROFESSIONAL AND EXCELLENT SERVICE. WE WILL GET
+                        TO KNOW YOU AND UNDERSTAND YOUR GOALS AND IDEAS TO HELP ACCELERATE THE GROWTH OF
+                        YOUR BUSINESS.
+                    </p>
+                </div>
+                <div class="col-lg-12 col-sm-6 col-xs-3 operations__content operations__content--2">
+                    <h5 class="operations__header">
+                        Content make your dreams come true, with instant Html Templates.
+                    </h5>
+                    <p class="lead">
+                        Getting people to your Website is only half the battle. What keeps them there is the content that’s provided when they arrive.
+                        The content that is presented on your website isn’t only for descriptive purposes
+                        for your product and services. Yes, this plays a major role but there are other factors that should be
+                        considered such as branching into search engine optimization.
+                    </p>
+                </div>
+                <div class="col-lg-12 col-sm-6 col-xs-3 operations__content operations__content--3">
+                    <h5 class="operations__header">
+                        No SEO? No problem! We can help instantly.
+                    </h5>
+                    <p class="lead">
+                        Search Engine Optimization assists in the ability for your website to rank higher in online searches for keywords that are relevant to
+                        the term’s users are searching for. Ranking higher
+                        on search engines drives an influx of higher quality un-paid traffic to your website granting more exposure and possibly an increased
+                        conversion rate to stimulate organic growth for your company.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="text-center cookie-message"></div>
+
+<!-- service -->
+<section class="bg-gray-white">
+    <div class="section bg-secondary section-bottom-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <span class="section-title-border border-center"></span>
+                    <p class="subtitle">Best Service</p>
+                    <h2 class="section-title text-white">Service We Provide</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service-wrapper">
+        <div class="container">
+            <div class="row">
+                <!-- service-item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="card border-0 rounded-0 box-shadow">
+                        <img class="card-img-top rounded-0" src="~/images/services/service-1.jpg" alt="Card image cap">
+                        <div class="card-body position-relative">
+                            <i class="card-icon fa fa-bar-chart"></i>
+                            <h4><a href="service-single.html" class="text-dark">Market Analysis</a></h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consecte tur adipis elit sed eiusmod.</p>
+                            <a href="#" class="btn btn-secondary btn-arrow">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- service-item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="card border-0 rounded-0 box-shadow">
+                        <img class="card-img-top rounded-0" src="~/images/services/service-2.jpg" alt="Card image cap">
+                        <div class="card-body position-relative">
+                            <i class="card-icon fa fa-handshake-o"></i>
+                            <h4><a href="service-single.html" class="text-dark">Business Consulting</a></h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consecte tur adipis elit sed eiusmod.</p>
+                            <a href="#" class="btn btn-secondary btn-arrow">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- service-item -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="card border-0 rounded-0 box-shadow">
+                        <img class="card-img-top rounded-0" src="~/images/services/service-3.jpg" alt="Card image cap">
+                        <div class="card-body position-relative">
+                            <i class="card-icon fa fa-briefcase"></i>
+                            <h4><a href="service-single.html" class="text-dark">Invesment Planning</a></h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consecte tur adipis elit sed eiusmod.</p>
+                            <a href="#" class="btn btn-secondary btn-arrow">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- /service -->
+@section scripts{
+    <script>
+     
+        const membersList = document.getElementById('members');
+        const searchBar = document.getElementById('searchBar');
+        const pagination_element = document.getElementById('pagination');
+        let membersCharacters = [];
+        let current_page = 1;
+        let rows = 5;
+        // Search Or Filter Members
+        searchBar.addEventListener('keyup', (e) => {
+            const searchString = e.target.value.toLowerCase();
+            const filteredMembers = membersCharacters.filter(members => {
+                return members.userName.toLowerCase().includes(searchString) ||
+                    members.knownAs.toLowerCase().includes(searchString);
+            });
+            displayMembers(filteredMembers);
+        })
+        // Display the Members
+        const loadMembers = async () => {
+            try {
+                const resp = await fetch('/api/members');
+                membersCharacters = await resp.json();
+                displayMembers(membersCharacters);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        const displayMembers = (members) => {
+            const htmlString = members.map((members) => {
+                return `
+                     <div class="col-lg-3 col-md-3 col-sm-6">
+                       <div class="card-box mb-4">
+                           <div class="card-img-wrapper-box">
+                               <img style="width:100%" class="img-thumbnail" src="/Content/Blog/${members.photo}" alt="${members.knownAs}" />
+                               <ul class="list-inline member-icons animate text-center">
+                                   <li class="list-inline-item">
+                                       <a class="btn btn-primary btn-sm" href="/Members/details/${members.id}">
+                                           <i class="fa fa-user"></i>
+                                       </a>
+                                   </li>
+                                   <li class="list-inline-item">
+                                       <a class="btn btn-primary btn-sm" target="_blank" href="https://www.facebook.com/Icreatesites4u-690772767726869">
+                                           <i class="fa fa-facebook"></i>
+                                       </a>
+                                   </li>
+                                   <li class="list-inline-item">
+                                       <a class="btn btn-primary btn-sm" target="_blank" href="https://github.com/UxDeveloper82">
+                                           <i class="fa fa-github"></i>
+                                       </a>
+                                   </li>
+                               </ul>
+                           </div>
+                           <div class="card-body p-1">
+                               <h6 class="card-title text-center mb-1">
+                                   <i class="fa fa-user"></i>
+                                            KnownAs: ${members.knownAs},
+                                            LastActive: ${members.lastActive}
+                               </h6>
+                               <p class="card-text text-muted text-center">From: ${members.city}</p>
+                               <p>software developer<p>
+                               </div>
+                         </div>
+                           </div>
+                           <div class="pagenumbers" id="pagination"></div>
+                               `;
+            }).join('');
+            membersList.innerHTML = htmlString;
+        }
+        loadMembers();
+    </script>
+
+}
