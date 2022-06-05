@@ -26,7 +26,7 @@ namespace MySite4u.Extensions
             services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
           .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(
+            options.UseSqlite(
                config.GetConnectionString("DefaultConnection")));
             services.ConfigureApplicationCookie(options =>
             {
