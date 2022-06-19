@@ -31,7 +31,7 @@ const displayMembers = (members) => {
                       return `
                               <div class="card card-box mb-4">
                                      <div class="card-img-wrapper-box">
-                                           <img style="width:100%" class="img-thumbnail" src="/Content/Blog/${members.photo}" alt="${members.knownAs}" />
+                                           <img style="width:100%" class="img-thumbnail" src="/content/blog/${members.photo}" alt="${members.knownAs}" />
                                            <ul class="list-inline member-icons animate text-center">
                                                <li class="list-inline-item">
                                                    <a class="btn btn-primary btn-sm" href="/UI/Members/details/${members.id}">
