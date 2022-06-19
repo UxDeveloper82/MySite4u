@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MySite4u.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220614200939_PostgressInitial")]
-    partial class PostgressInitial
+    [Migration("20220617004106_progressql")]
+    partial class progressql
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

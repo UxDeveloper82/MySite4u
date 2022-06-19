@@ -128,7 +128,7 @@ namespace MySite4u.Areas.Identity.Pages.Account
                         await _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Indi));
                     }
 
-                    //await _userManager.AddToRoleAsync(user, SD.Role_Admin);
+                     //await _userManager.AddToRoleAsync(user, SD.Role_Admin);
 
                     if (user.Role == null)
                     {

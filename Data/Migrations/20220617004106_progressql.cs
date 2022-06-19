@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace MySite4u.Data.Migrations
 {
-    public partial class PostgressInitial : Migration
+    public partial class progressql : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
