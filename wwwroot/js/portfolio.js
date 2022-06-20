@@ -72,7 +72,7 @@ const displayMenuItems = (portfolios) => {
                <div class="col-lg-4 item ${portfolios.type}">
                             <div class="card">
                                 <div class="card-head">
-                                    <img src="/Content/Blog/${portfolios.portfolioPhoto}" alt="" class="img-fluid card-img">
+                                    <img src="/content/blog/${portfolios.portfolioPhoto}" alt="" class="img-fluid card-img">
                                     <div class="card-hover">
                                         <h4>Details: ${portfolios.type}</h4>
                                     </div>
