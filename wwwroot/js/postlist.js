@@ -73,7 +73,8 @@ const displayPostItems = (post) => {
             return `
               <div class="card mb-4 posts">
                   <div class="item ${post.category}">
-                        <img class="card-img-top img-fluid" src="/content/blog/${post.image}">
+                        <img class="card-img-top img-fluid" src="/content/blog/${post.image}" alt="${post.title}" />
+                               
                         <div class="card-body">
                             <h2 class="card-title">${post.title}</h2>
                             <a asp-action="Detail" href="/UI/Post/Detail/${post.id}" class="btn btn-primary">Read More</a>

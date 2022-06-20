@@ -13,7 +13,7 @@
             <a class="btn btn-info" asp-controller="Portfolio" asp-action="Index">Go Back To List</a>
         </nav>
         <div class="container-fluid">
-            <form asp-controller="Portfolio" asp-action="Edit" method="post" enctype="multipart/form-data">
+            <form asp-controller="MyPortfolio" asp-action="Edit" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 @if (Model.Id != 0)
                 {
