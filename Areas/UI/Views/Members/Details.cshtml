@@ -16,7 +16,7 @@
             <div class="card">
                 @if (!string.IsNullOrEmpty(Model.Photo))
                 {
-                    var image_path = $"/Content/Blog/{Model.Photo}";
+                    var image_path = $"/content/blog/{Model.Photo}";
                     <img class="card-img-top img-thumbnail" src="@image_path" alt="@Model.KnownAs">}
 
                 <div class="card-body">

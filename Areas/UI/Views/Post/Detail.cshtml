@@ -18,7 +18,7 @@
 
             @if (!String.IsNullOrEmpty(Model.Image))
             {
-                var image_path = $"/Content/Blog/{Model.Image}";
+                var image_path = $"/content/blog/{Model.Image}";
                 <img style="width:100%" class="img-thumbnail" src="@image_path" />
                 <h2 class="blog-post-title">@Model.Title</h2>
             }
