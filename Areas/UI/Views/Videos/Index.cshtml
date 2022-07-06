@@ -4,9 +4,7 @@
 <hr />
 
 <div class="container">
-     <div class="row" id="youtube-container">
-
-     </div>
+     <div class="row" id="youtube-container"></div>
 </div>
 
 
@@ -25,8 +23,9 @@
                     for (video of videos) {
                         videoContainer.innerHTML += `
                         <div class="col-md-4 p-3">
-                            <h5 class="text-muted">${video.snippet.title}</h4>
-                            <img src="${video.snippet.thumbnails.default.url}">
+                            <a href="https://www.youtube.com/watch?v=${video.id.videoId}" target="_blank">
+                            <img src="${video.snippet.thumbnails.medium.url}"></a>
+                            <h4 class="text-muted">${video.snippet.title}</h4>
                         </div>
                       `
                     }
